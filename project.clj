@@ -10,5 +10,6 @@
 
   :java-source-paths ["java"]
 
-  :repl-options {:welcome (println "Welcome to the magical world of Clojure!")}
+  :repl-options {:prompt (fn [ns] (str "[" ns "] master? "))
+                 :welcome (println "Welcome to the magical world of Clojure!")}
   )
