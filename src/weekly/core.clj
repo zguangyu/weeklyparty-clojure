@@ -30,6 +30,11 @@
                            (zero? (rem x 5)))]
              x)))
 
+(defn my-juxt
+  [& func-list]
+  (fn [& arg-list]
+    (map #(apply % arg-list) func-list)))
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
